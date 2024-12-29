@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      form {
+        display: inline-block;
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 50px;
+      }
+      label {
+        display: block;
+        margin: 10px 0 5px;
+      }
+      input {
+        padding: 5px;
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 250px;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Play Golf Prediction</h1>
+    <form action="/predict" method="POST">
+      <label>Outlook (0=Sunny, 1=Overcast, 2=Rainy):</label>
+      <input type="number" name="Outlook" required /><br />
+      <label>Temperature (0=Cool, 1=Hot, 2=Mild):</label>
+      <input type="number" name="Temperature" required /><br />
+      <label>Humidity (0=High, 1=Normal):</label>
+      <input type="number" name="Humidity" required /><br />
+      <label>Windy (0=No, 1=Yes):</label>
+      <input type="number" name="Windy" required /><br />
+      <button type="submit">Predict</button>
+    </form>
+  </body>
+</html>
